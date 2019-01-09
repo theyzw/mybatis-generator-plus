@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!--
+        出现错误：Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+        解决办法：将本地的MAVEN仓库中的mysql驱动引入进来
+    -->
+    <!--<classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar"/>-->
+
+    <context id="monitor_main_provider" targetRuntime="MyBatis3">
+        <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!--不生成注释-->
+        <!--<commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>-->
+        <!--自定义注释生成器-->
+        <commentGenerator type="com.yekai.MyCommentGenerator">
+        </commentGenerator>
+
+        <!-- 配置数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/monitor?useSSL=true"
+                        userId="root"
+                        password="root">
+            <!-- 针对mysql数据库 -->
+            <!--<property name="useInformationSchema" value="true"></property>-->
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 指定javaBean生成的位置 -->
+        <javaModelGenerator targetPackage="com.yekai.model" targetProject="src/main/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="false"/>
+            <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+
+        <!--指定sql映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <!--<property name="enableSubPackages" value="true" />-->
+        </sqlMapGenerator>
+
+        <!-- 指定dao接口生成的位置，mapper接口 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yekai.dao" targetProject="src/main/java">
+            <!--<property name="enableSubPackages" value="true" />-->
+        </javaClientGenerator>
+
+        <!-- table表生成对应的DomainObject(mapperName="AdminDao") -->
+        <!--<table tableName=""></table>-->
+        <table tableName="moni_group" domainObjectName="Group" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <!--<columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />-->
+        </table>
+        <!--<table tableName="moni_group_bu" domainObjectName="GroupBu" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="moni_user" domainObjectName="User" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />
+        </table>
+        <table tableName="moni_group_user" domainObjectName="GroupUser" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="moni_group_item" domainObjectName="GroupItem" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="moni_Item" domainObjectName="MoniItem" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />
+            <columnOverride column="upload_period" javaType="cn.miao.middle.monitor.enums.UploadPeriod" />
+            <columnOverride column="data_source" javaType="cn.miao.middle.monitor.enums.DataSource" />
+            <columnOverride column="heartbeat" javaType="cn.miao.middle.monitor.enums.Heartbeat" />
+            <columnOverride column="keyinfo_type" javaType="cn.miao.middle.monitor.enums.KeyinfoType" />
+            <columnOverride column="warning_interval" javaType="cn.miao.middle.monitor.enums.WarningInterval" />
+        </table>
+        <table tableName="moni_rule" domainObjectName="MoniRule" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <columnOverride column="policy" javaType="cn.miao.middle.monitor.enums.Policy" />
+            <columnOverride column="data_validity" javaType="cn.miao.middle.monitor.enums.DataValidity" />
+            <columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />
+            <columnOverride column="operator" javaType="cn.miao.middle.monitor.enums.Operator" />
+            <columnOverride column="units" javaType="cn.miao.middle.monitor.enums.Units" />
+            <columnOverride column="warning_period" javaType="cn.miao.middle.monitor.enums.WarningPeriod" />
+        </table>
+        <table tableName="moni_result" domainObjectName="MoniResult" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <columnOverride column="warn_status" javaType="cn.miao.middle.monitor.enums.WarnStatus" />
+        </table>
+        <table tableName="moni_info" domainObjectName="MoniInfo" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="moni_info_detail" domainObjectName="MoniInfoDetail" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="moni_system_log" domainObjectName="SystemLog" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <columnOverride column="log_operate" javaType="cn.miao.middle.monitor.enums.LogOperate" />
+            <columnOverride column="log_module" javaType="cn.miao.middle.monitor.enums.LogModule" />
+        </table>-->
+
+        <!--enableInsert CDATA #IMPLIED
+        enableSelectByPrimaryKey CDATA #IMPLIED
+        enableSelectByExample CDATA #IMPLIED
+        enableUpdateByPrimaryKey CDATA #IMPLIED
+        enableDeleteByPrimaryKey CDATA #IMPLIED
+        enableDeleteByExample CDATA #IMPLIED
+        enableCountByExample CDATA #IMPLIED
+        enableUpdateByExample CDATA #IMPLIED
+        selectByPrimaryKeyQueryId CDATA #IMPLIED
+        selectByExampleQueryId CDATA #IMPLIED
+        modelType CDATA #IMPLIED
+        escapeWildcards CDATA #IMPLIED
+        delimitIdentifiers CDATA #IMPLIED
+        delimitAllColumns CDATA #IMPLIED>-->
+    </context>
+
+</generatorConfiguration>
