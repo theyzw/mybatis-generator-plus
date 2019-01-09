@@ -58,14 +58,14 @@
         <!--<table tableName=""></table>-->
         <table tableName="moni_group" domainObjectName="Group" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <!--<columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />-->
+            <!--<columnOverride column="status" javaType="cn.yk.middle.monitor.enums.Status" />-->
         </table>
         <!--<table tableName="moni_group_bu" domainObjectName="GroupBu" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
         <table tableName="moni_user" domainObjectName="User" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />
+            <columnOverride column="status" javaType="cn.yk.middle.monitor.enums.Status" />
         </table>
         <table tableName="moni_group_user" domainObjectName="GroupUser" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
@@ -73,27 +73,27 @@
         <table tableName="moni_group_item" domainObjectName="GroupItem" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
-        <table tableName="moni_Item" domainObjectName="MoniItem" enableCountByExample="false"
+        <table tableName="moni_item" domainObjectName="MoniItem" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />
-            <columnOverride column="upload_period" javaType="cn.miao.middle.monitor.enums.UploadPeriod" />
-            <columnOverride column="data_source" javaType="cn.miao.middle.monitor.enums.DataSource" />
-            <columnOverride column="heartbeat" javaType="cn.miao.middle.monitor.enums.Heartbeat" />
-            <columnOverride column="keyinfo_type" javaType="cn.miao.middle.monitor.enums.KeyinfoType" />
-            <columnOverride column="warning_interval" javaType="cn.miao.middle.monitor.enums.WarningInterval" />
+            <columnOverride column="status" javaType="cn.yk.middle.monitor.enums.Status" />
+            <columnOverride column="upload_period" javaType="cn.yk.middle.monitor.enums.UploadPeriod" />
+            <columnOverride column="data_source" javaType="cn.yk.middle.monitor.enums.DataSource" />
+            <columnOverride column="heartbeat" javaType="cn.yk.middle.monitor.enums.Heartbeat" />
+            <columnOverride column="keyinfo_type" javaType="cn.yk.middle.monitor.enums.KeyinfoType" />
+            <columnOverride column="warning_interval" javaType="cn.yk.middle.monitor.enums.WarningInterval" />
         </table>
         <table tableName="moni_rule" domainObjectName="MoniRule" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <columnOverride column="policy" javaType="cn.miao.middle.monitor.enums.Policy" />
-            <columnOverride column="data_validity" javaType="cn.miao.middle.monitor.enums.DataValidity" />
-            <columnOverride column="status" javaType="cn.miao.middle.monitor.enums.Status" />
-            <columnOverride column="operator" javaType="cn.miao.middle.monitor.enums.Operator" />
-            <columnOverride column="units" javaType="cn.miao.middle.monitor.enums.Units" />
-            <columnOverride column="warning_period" javaType="cn.miao.middle.monitor.enums.WarningPeriod" />
+            <columnOverride column="policy" javaType="cn.yk.middle.monitor.enums.Policy" />
+            <columnOverride column="data_validity" javaType="cn.yk.middle.monitor.enums.DataValidity" />
+            <columnOverride column="status" javaType="cn.yk.middle.monitor.enums.Status" />
+            <columnOverride column="operator" javaType="cn.yk.middle.monitor.enums.Operator" />
+            <columnOverride column="units" javaType="cn.yk.middle.monitor.enums.Units" />
+            <columnOverride column="warning_period" javaType="cn.yk.middle.monitor.enums.WarningPeriod" />
         </table>
         <table tableName="moni_result" domainObjectName="MoniResult" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <columnOverride column="warn_status" javaType="cn.miao.middle.monitor.enums.WarnStatus" />
+            <columnOverride column="warn_status" javaType="cn.yk.middle.monitor.enums.WarnStatus" />
         </table>
         <table tableName="moni_info" domainObjectName="MoniInfo" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
@@ -103,8 +103,8 @@
         </table>
         <table tableName="moni_system_log" domainObjectName="SystemLog" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <columnOverride column="log_operate" javaType="cn.miao.middle.monitor.enums.LogOperate" />
-            <columnOverride column="log_module" javaType="cn.miao.middle.monitor.enums.LogModule" />
+            <columnOverride column="log_operate" javaType="cn.yk.middle.monitor.enums.LogOperate" />
+            <columnOverride column="log_module" javaType="cn.yk.middle.monitor.enums.LogModule" />
         </table>-->
 
         <!--enableInsert CDATA #IMPLIED
