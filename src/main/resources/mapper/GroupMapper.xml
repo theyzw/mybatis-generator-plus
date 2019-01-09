@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yekai.dao.GroupMapper">
-  <resultMap id="BaseResultMap" type="com.yekai.model.Group">
+<mapper namespace="com.yk.dao.GroupMapper">
+  <resultMap id="BaseResultMap" type="com.yk.model.Group">
     <id column="group_id" jdbcType="INTEGER" property="groupId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="count" jdbcType="INTEGER" property="count" />
@@ -22,7 +22,7 @@
     delete from moni_group
     where group_id = #{groupId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.yekai.model.Group">
+  <insert id="insert" parameterType="com.yk.model.Group">
     insert into moni_group (group_id, name, count, 
       status, create_time, update_time
       )
@@ -30,7 +30,7 @@
       #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yekai.model.Group">
+  <insert id="insertSelective" parameterType="com.yk.model.Group">
     insert into moni_group
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="groupId != null">
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKeySelective" parameterType="com.yk.model.Group">
     update moni_group
     <set>
       <if test="name != null">
@@ -94,7 +94,7 @@
     </set>
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKey" parameterType="com.yk.model.Group">
     update moni_group
     set name = #{name,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},
@@ -103,7 +103,7 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="com.yekai.model.Group">
+  <resultMap id="BaseResultMap" type="com.yk.model.Group">
     <id column="group_id" jdbcType="INTEGER" property="groupId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="count" jdbcType="INTEGER" property="count" />
@@ -124,7 +124,7 @@
     delete from moni_group
     where group_id = #{groupId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.yekai.model.Group">
+  <insert id="insert" parameterType="com.yk.model.Group">
     insert into moni_group (group_id, name, count, 
       status, create_time, update_time
       )
@@ -132,7 +132,7 @@
       #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yekai.model.Group">
+  <insert id="insertSelective" parameterType="com.yk.model.Group">
     insert into moni_group
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="groupId != null">
@@ -175,7 +175,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKeySelective" parameterType="com.yk.model.Group">
     update moni_group
     <set>
       <if test="name != null">
@@ -196,7 +196,7 @@
     </set>
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKey" parameterType="com.yk.model.Group">
     update moni_group
     set name = #{name,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},
@@ -205,7 +205,7 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="com.yekai.model.Group">
+  <resultMap id="BaseResultMap" type="com.yk.model.Group">
     <id column="group_id" jdbcType="INTEGER" property="groupId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="count" jdbcType="INTEGER" property="count" />
@@ -226,7 +226,7 @@
     delete from moni_group
     where group_id = #{groupId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.yekai.model.Group">
+  <insert id="insert" parameterType="com.yk.model.Group">
     insert into moni_group (group_id, name, count, 
       status, create_time, update_time
       )
@@ -234,7 +234,7 @@
       #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yekai.model.Group">
+  <insert id="insertSelective" parameterType="com.yk.model.Group">
     insert into moni_group
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="groupId != null">
@@ -277,7 +277,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKeySelective" parameterType="com.yk.model.Group">
     update moni_group
     <set>
       <if test="name != null">
@@ -298,7 +298,7 @@
     </set>
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKey" parameterType="com.yk.model.Group">
     update moni_group
     set name = #{name,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},
@@ -307,7 +307,7 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="com.yekai.model.Group">
+  <resultMap id="BaseResultMap" type="com.yk.model.Group">
     <id column="group_id" jdbcType="INTEGER" property="groupId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="count" jdbcType="INTEGER" property="count" />
@@ -328,7 +328,7 @@
     delete from moni_group
     where group_id = #{groupId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.yekai.model.Group">
+  <insert id="insert" parameterType="com.yk.model.Group">
     insert into moni_group (group_id, name, count, 
       status, create_time, update_time
       )
@@ -336,7 +336,7 @@
       #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yekai.model.Group">
+  <insert id="insertSelective" parameterType="com.yk.model.Group">
     insert into moni_group
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="groupId != null">
@@ -379,7 +379,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKeySelective" parameterType="com.yk.model.Group">
     update moni_group
     <set>
       <if test="name != null">
@@ -400,7 +400,7 @@
     </set>
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKey" parameterType="com.yk.model.Group">
     update moni_group
     set name = #{name,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},
@@ -409,7 +409,7 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="com.yekai.model.Group">
+  <resultMap id="BaseResultMap" type="com.yk.model.Group">
     <id column="group_id" jdbcType="INTEGER" property="groupId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="count" jdbcType="INTEGER" property="count" />
@@ -430,7 +430,7 @@
     delete from moni_group
     where group_id = #{groupId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.yekai.model.Group">
+  <insert id="insert" parameterType="com.yk.model.Group">
     insert into moni_group (group_id, name, count, 
       status, create_time, update_time
       )
@@ -438,7 +438,7 @@
       #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yekai.model.Group">
+  <insert id="insertSelective" parameterType="com.yk.model.Group">
     insert into moni_group
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="groupId != null">
@@ -481,7 +481,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKeySelective" parameterType="com.yk.model.Group">
     update moni_group
     <set>
       <if test="name != null">
@@ -502,7 +502,7 @@
     </set>
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yekai.model.Group">
+  <update id="updateByPrimaryKey" parameterType="com.yk.model.Group">
     update moni_group
     set name = #{name,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},

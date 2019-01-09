@@ -1,4 +1,4 @@
-package com.yekai;
+package com.yk;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +16,7 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 
 /**
  * @Title: StartUp.java
- * @Package com.yekai.MyCommentGenerator
+ * @Package com.yk.MyCommentGenerator
  * @Description: TODO
  * @author fendo
  * @date 2017年10月5日 下午3:53:17

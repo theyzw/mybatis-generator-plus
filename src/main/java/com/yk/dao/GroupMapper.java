@@ -3,9 +3,9 @@
 * GroupMapper.java
 * @date 2018-08-31
 */
-package com.yekai.dao;
+package com.yk.dao;
 
-import com.yekai.model.Group;
+import com.yk.model.Group;
 
 public interface GroupMapper {
     /**

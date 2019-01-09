@@ -3,7 +3,7 @@
 * Group.java
 * @date 2018-08-31
 */
-package com.yekai.model;
+package com.yk.model;
 
 import java.util.Date;
 
