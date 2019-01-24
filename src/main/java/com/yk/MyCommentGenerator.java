@@ -231,9 +231,9 @@ public class MyCommentGenerator implements CommentGenerator {
         if (suppressAllComments) {
             return;
         }
-        method.addJavaDocLine("/**");
-        addJavadocTag(method, false);
-        method.addJavaDocLine(" */");
+        //method.addJavaDocLine("/**");
+        //addJavadocTag(method, false);
+        //method.addJavaDocLine(" */");
     }
 
     /**
